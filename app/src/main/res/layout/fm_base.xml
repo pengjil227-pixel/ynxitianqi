@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flContentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="45dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:viewBindingIgnore="true">
+
+    <!--  填充内容的主体start  -->
+    <ViewStub
+        android:id="@+id/vsFMBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--  填充内容的主体end  -->
+</FrameLayout>

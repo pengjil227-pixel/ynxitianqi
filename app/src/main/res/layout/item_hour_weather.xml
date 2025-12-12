@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/weather_card_background"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 时间 -->
+        <TextView
+            android:id="@+id/tv_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            tools:text="12:00"
+            />
+
+        <!-- 气象图标 -->
+        <ImageView
+            android:id="@+id/iv_hour_weather"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/weather_icon"
+            android:scaleType="centerCrop"
+            android:src="@null"
+            app:tint="@color/white"
+            tools:src="@mipmap/icon_sun"
+            tools:tint="@color/white"
+            />
+
+        <!-- 天气及温度 -->
+        <TextView
+            android:id="@+id/tv_hour_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="@string/default_temp"
+            />
+
+        <!-- 湿度 -->
+        <TextView
+            android:id="@+id/tv_hour_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            tools:text="湿度 53%"
+            />
+
+        <!-- 风向及风力 -->
+        <TextView
+            android:id="@+id/tv_hour_wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            tools:text="东北风 2级"
+            />
+
+        <!-- 气压 -->
+        <TextView
+            android:id="@+id/tv_hour_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            tools:text="1003 hPa"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+     定义全局主题 AppTheme
+     继承自 Theme.AppCompat.Light.DarkActionBar
+     自定义了颜色属性：
+     - colorPrimary: 主色调。
+     - colorPrimaryDark: 深色版本的主色调，通常用于状态栏。
+     - colorAccent: 强调色，通常用于按钮、输入框等控件。
+     -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--
+     定义 LoadingDialog 样式：
+     - 基于系统对话框主题 Theme.Dialog 创建了一个透明背景的对话框样式。
+     - 设置无标题栏 (windowNoTitle) 和关闭背景遮罩 (backgroundDimEnabled)。
+     -->
+    <style name="LoadingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <!--
+     BottomSheet 相关样式配置：
+     - 定义了 bottomSheetStyleWrapper：继承自 Widget.Design.BottomSheet.Modal，
+     - 并设置了 behavior_peekHeight 为一个非常大的值（3000dp），使 BottomSheet 默认显示更多内容。
+     BottomSheetDialog：
+     - 基于 Theme.Design.Light.BottomSheetDialog，并将自定义的 bottomSheetStyleWrapper 应用到此对话框主题中。
+     BottomSheetDialog_Immersion：
+     - 继承自 BottomSheetDialog，添加了透明背景、启用背景遮罩、无标题栏，并设置窗口非浮动模式，适用于沉浸式设计。
+     -->
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">3000dp</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="BottomSheetDialog_Immersion" parent="BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>
